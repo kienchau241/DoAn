@@ -5,6 +5,7 @@ import { Button } from 'react-native-web';
 // import icon
 import { AntDesign } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons';
 // Image 
 import sbReward from "./assets/image/SbReward.png";
 
@@ -109,8 +110,7 @@ export default function App() {
             </ImageBackground>
         </SafeAreaView>
         {/* Order*/}
-
-        <SafeAreaView style ={{flexDirection: 'row'}}>
+        <SafeAreaView style ={{flexDirection: 'row', marginBottom: 8}}>
             <View style = {[common.width50]}>
                 <Text style ={[common.pdleft20, common.mgBot8,{lineHeight: 30, fontSize:14, color :'#9DAAAA'}]}>ĐẶT MÓN QUA ỨNG DỤNG</Text>
                 <Text style={[common.pdleft20,{fontSize:24, marginBottom: 12}]}>Nhanh chóng, tiện lợi</Text>
@@ -120,9 +120,29 @@ export default function App() {
                     </Text>
                 </View>
             </View>
-            <ImageBackground source={require('./assets/image/AppOrder.jpg')} style = {[common.width50,{flex: 1,resizeMode: 'contain', justifyContent:"center"}]}>
+            <ImageBackground source={require('./assets/image/AppOrder.jpg')} style = {[common.width50,{flex: 1,resizeMode: 'contain', justifyContent:"center", width: '100%'}]}>
 
             </ImageBackground>
+        </SafeAreaView>
+
+        {/* Order Below*/}
+        <SafeAreaView style ={{flexDirection: 'row', marginBottom: 8}}>
+            <View style = {[common.width50]}>
+                <Text style ={[common.pdleft20, common.mgBot8,{lineHeight: 30, fontSize:14, color :'#9DAAAA'}]}>TÍNH NĂNG MỚI CỦA EGIFT</Text>
+                <Text style={[common.pdleft20,{fontSize:24, marginBottom: 12}]}>Gửi tặng yêu thương</Text>
+                <View style = {[common.moreBtn, {width: 100}]}>
+                    <Text style = {[common.whiteColor,{fontSize: 18}]}>
+                        Gửi ngay
+                    </Text>
+                </View>
+            </View>
+            <ImageBackground source={require('./assets/image/LightUpDay.jpg')} style = {[common.width50,{flex: 1,resizeMode: 'contain', justifyContent:"center", width: '100%'}]}></ImageBackground>
+        </SafeAreaView>
+
+        {/* footer*/}
+        <SafeAreaView style = {{justifyContent : 'center',}}>
+            <MaterialIcons name="celebration" size={24} color="black" />
+            <Text></Text>
         </SafeAreaView>
     </SafeAreaView>
     );
