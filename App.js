@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, SafeAreaView, ScrollView} from 'react-native';
 import { Button } from 'react-native-web';
 // import icon
 import { AntDesign } from '@expo/vector-icons'; 
@@ -140,11 +140,21 @@ export default function App() {
         </SafeAreaView>
 
         {/* footer*/}
-        <SafeAreaView style = {{justifyContent : 'center',}}>
-            <MaterialIcons name="celebration" size={24} color="black" />
-            <Text></Text>
+        <SafeAreaView style = {{alignItems:'center', marginBottom: 40}}>
+            <MaterialIcons name="celebration" size={44} color="#2a8a15" />
+            <Text style={[{fontSize:18, color:'#9DAAAA'}]}>Đã cập nhật thông tin mới nhất </Text>
         </SafeAreaView>
+
+        {/* Footer nav*/}
+        <SafeAreaView style={{flex:1}}>
+            <SafeAreaView style={{position:"absolute", bottom: 0, left: 0, right: 0, backgroundColor:'red', height:50}}>
+                <Text>NAV</Text>
+            </SafeAreaView>
+        </SafeAreaView>
+
     </SafeAreaView>
+    
+
     );
 }
 
