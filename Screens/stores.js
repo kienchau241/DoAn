@@ -5,6 +5,8 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 
+
+
 export default function Stores({navigation}){
     const [text, onChangeText] = React.useState("Useless Text");
     const [number, onChangeNumber] = React.useState(null);
@@ -25,6 +27,12 @@ export default function Stores({navigation}){
 
         </View>
 
+        <View style = {styles.mapkit}>
+            <Image 
+                style={{width: 500, height: 350}}
+                source={require('../assets/image/mapdemo.png')}
+            />
+        </View>
         
 
         <View style={styles.list}>
@@ -86,9 +94,10 @@ const styles = StyleSheet.create({
         padding: 10,
         
     },
-    map: {
-        width: 300,
-        height: 300,
+    mapkit: {
+
+        alignItems: 'center',
+
     
     },
 });
