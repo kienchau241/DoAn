@@ -30,11 +30,6 @@ function App(){
 export default App;
 
 
-const style = StyleSheet.create({
-    container:{
-        flex: 1
-    }
-})
 
 
 

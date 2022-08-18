@@ -2,6 +2,10 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, SafeAreaView, ScrollView} from 'react-native';
 import { Button, FlatList } from 'react-native-web';
 import { StatusBar } from 'expo-status-bar';
+//Style
+// import {common} from '../style';
+// import {headerStyle} from '../style';
+
 // import icon
 import { AntDesign } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons'; 
