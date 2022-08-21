@@ -13,38 +13,39 @@ export default function Stores({navigation}){
     return(
         
         <SafeAreaView style ={{flex : 1 }}>
-        <View style={styles.header}>
-        <Text style={styles.headerText}>Tìm Cửa Hàng </Text>
-        </View>
-        
-        <View style={styles.find}>
-        <TextInput
-            style={styles.input}
-            onChangeText={onChangeText}
-            value={number}
-            placeholder="Tìm Cửa Hàng Bạn Muốn" 
-            />
+            <View style = {[styles.shadowEffect]}>
+                <View style={styles.header}>
+                <Text style={styles.headerText}>Tìm Cửa Hàng </Text>
+                </View>
 
-        </View>
+                <View style={styles.find}>
+                <TextInput
+                    style={styles.input}
+                    onChangeText={onChangeText}
+                    value={number}
+                    placeholder="Tìm Cửa Hàng Bạn Muốn" 
+                    />
+                </View>
+            </View>
 
-        <View style = {styles.mapkit}>
-            <Image 
-                style={{width: 500, height: 350}}
-                source={require('../assets/image/mapdemo.png')}
-            />
-        </View>
-        
+            <View style = {styles.mapkit}>
+                <Image 
+                    style={{width: 500, height: 350}}
+                    source={require('../assets/image/mapdemo.png')}
+                />
+            </View>
 
-        <View style={styles.list}>
-        <SectionList
-            sections={[
-            {title: 'Gần Bạn', data: ['Emart', 'Sense City', 'Pear Plaza', 'Phan Xich Long', 'Golden Mansion', 'Landmard 81', 'Ibis','Nguyễn Văn Trỗi','Saigon Pearl','Thao Dien']},
-            {title: 'Tất Cả', data: ['Aeon Mall Hà Đông', 'Bà Nà Hill', 'Bà Nà Kiosk', 'Bà Triệu', 'Bạch Đằng', 'Charmvit', 'CMT8','Crescent Strip','Đông Du','Duy Tân']},
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
-          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}         
-            />    
-        </View>
+
+            <View style={styles.list}>
+            <SectionList
+                sections={[
+                {title: 'Gần Bạn', data: ['Emart', 'Sense City', 'Pear Plaza', 'Phan Xich Long', 'Golden Mansion', 'Landmard 81', 'Ibis','Nguyễn Văn Trỗi','Saigon Pearl','Thao Dien']},
+                {title: 'Tất Cả', data: ['Aeon Mall Hà Đông', 'Bà Nà Hill', 'Bà Nà Kiosk', 'Bà Triệu', 'Bạch Đằng', 'Charmvit', 'CMT8','Crescent Strip','Đông Du','Duy Tân']},
+              ]}
+              renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
+              renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}         
+                />    
+            </View>
         </SafeAreaView>
     );
 };
@@ -97,7 +98,16 @@ const styles = StyleSheet.create({
     mapkit: {
 
         alignItems: 'center',
-
-    
     },
+    shadowEffect:{
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    }
 });

@@ -11,9 +11,7 @@ import { View } from 'react-native-web';
 export default function Booking({navigation}){
     return(
         <SafeAreaView>
-            <Text>
-                
-            </Text>
+        
         </SafeAreaView>
     )
 }

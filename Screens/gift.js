@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 export default function Gift({navigation}){
     return(
         <SafeAreaView>
-            <View style = {[{backgroundColor: "#fff", paddingBottom: 20}]}>
+            <View style = {[{backgroundColor: "#fff", paddingBottom: 20},style.shadowEffect]}>
                 <SafeAreaView >
                     <Text style = {[{marginTop: 50, paddingLeft: 20, fontSize: 24}]}>
                         Quà tặng
@@ -91,6 +91,17 @@ const style = StyleSheet.create({
         borderBottomWidth:StyleSheet.hairlineWidth, 
         borderBottomColor:'#D3DADA', 
         paddingBottom: 15
+    },
+    shadowEffect:{
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
     }
 
 });

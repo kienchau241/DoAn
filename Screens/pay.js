@@ -4,20 +4,20 @@ import { StyleSheet, SafeAreaView, Text, Image, View } from 'react-native';
 export default function PayMent({navigation}){
     return(
         <SafeAreaView style ={{flex : 1 }}>
-            <View style={styles.header}>
-            <Text style={styles.headerText}>Thẻ Starbucks</Text>
+            <View style={[styles.header, styles.shadowEffect]}>
+                <Text style={styles.headerText}>Thẻ Starbucks</Text>
             </View>
            <View style={styles.container}>
-            <Image 
-                style={{width: 400, height: 200,resizeMode: 'contain', justifyContent:"center"}}
-                source={require('../assets/image/card.png')}
-            />
+                <Image 
+                    style={{width: 400, height: 200,resizeMode: 'contain', justifyContent:"center"}}
+                    source={require('../assets/image/card.png')}
+                />
             </View>
             <View style={styles.container2}>
-            <Text style ={styles.Textcn}>Thanh Toán và Bắt Đầu Trải Nghiệm</Text>
-            <Text style ={styles.Textcn2}>Để Sử dụng hoặc nạp thêm tiền vào thẻ của bạn,
-                hãy đăng nhập hoặc đăng ký chương trình ngay.
-            </Text>
+                <Text style ={styles.Textcn}>Thanh Toán và Bắt Đầu Trải Nghiệm</Text>
+                <Text style ={styles.Textcn2}>Để Sử dụng hoặc nạp thêm tiền vào thẻ của bạn,
+                    hãy đăng nhập hoặc đăng ký chương trình ngay.
+                </Text>
             </View>
             
            
@@ -61,6 +61,17 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         paddingTop: 10   
     },
+    shadowEffect:{
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    }
     
 });
 

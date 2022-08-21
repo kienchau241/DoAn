@@ -220,7 +220,8 @@ const headerStyle = StyleSheet.create({
     },
     headerBtnTxt :{
         justifyContent: 'space-between',
-    }
+    },
+
 }); 
 
 const body= StyleSheet.create({
